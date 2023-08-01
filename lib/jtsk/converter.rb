@@ -73,7 +73,7 @@ module JTSK
       JTSK::Wgs84Result.new(latitude, longitude)
     end
 
-    protected
+    
 
     def wgs84_to_jtsk(latitude, longitude)
       if ((latitude < 40.0) || (latitude > 60.0) || (longitude < 5.0) || (longitude > 25.0))
@@ -83,6 +83,8 @@ module JTSK
         self.bessel_to_jtsk(bessel.latitude, bessel.longitude);
       end
     end
+    
+    protected
 
     def wgs84_to_bessel(latitude, longitude, altitude = 0.0)
       b = deg2rad(latitude)
